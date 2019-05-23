@@ -1,4 +1,4 @@
-version: '2.2'
+version: '2.0'
 
 services:
   openhab:
@@ -46,7 +46,7 @@ services:
     volumes:
     - "${PWD}/grafana/data:/var/lib/grafana/"
   nodered:
-    image: nodered/node-red-docker:latest
+    image: nodered/node-red-docker:rpi
     container_name: nodered
     restart: always
     user: root
