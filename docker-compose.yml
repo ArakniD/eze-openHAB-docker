@@ -1,4 +1,4 @@
-version: '2.2'
+version: '2.0'
 
 services:
   openhab:
@@ -50,8 +50,8 @@ services:
     image: nodered/node-red-docker:rpi
     container_name: nodered
     restart: always
-    network_mode: host
     user: root
+    network_mode: host
     ports:
     - "1880:1880"
     volumes:
