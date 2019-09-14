@@ -15,7 +15,7 @@ services:
     environment:
       OPENHAB_HTTP_PORT: "8080"
       OPENHAB_HTTPS_PORT: "8443"
-      EXTRA_JAVA_OPTS: "-Duser.timezone=Europe/Berlin"
+      EXTRA_JAVA_OPTS: "-Duser.timezone=Australia/Brisbane"
     ports:
       - "8080:8080"
       - "8443:8443"
@@ -47,7 +47,7 @@ services:
     volumes:
     - "${PWD}/grafana/data:/var/lib/grafana/"
   nodered:
-    image: nodered/node-red-docker:latest
+    image: nodered/node-red-docker:rpi
     container_name: nodered
     restart: always
     network_mode: host
